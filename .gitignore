@@ -1,0 +1,8 @@
+tabbed
+tabbed.o
+config.h
+config.h.bck
+*.orig
+*.rej
+xembed
+xembed.o
