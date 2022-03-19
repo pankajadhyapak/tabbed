@@ -377,7 +377,7 @@ drawbar(void)
 		} else {
 			col = clients[c]->urgent ? dc.urg : dc.norm;
 		}
-		snprintf(tabtitle, sizeof(tabtitle), "%d: %s",
+		snprintf(tabtitle, sizeof(tabtitle), "%d %s",
 		         c + 1, clients[c]->name);
 		drawtext(tabtitle, col);
 		dc.x += dc.w;

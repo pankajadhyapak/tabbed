@@ -2,11 +2,11 @@
 
 /* appearance */
 static const char font[]        = "JetBrainsMono Nerd Font:size=10";
-static const char* normbgcolor  = "#282a36";
-static const char* normfgcolor  = "#cccccc";
-static const char* selbgcolor   = "#924441";
-static const char* selfgcolor   = "#ffffff";
-static const char* urgbgcolor   = "#111111";
+static const char* normbgcolor  = "#1E1E2E";
+static const char* normfgcolor  = "#D9E0EE";
+static const char* selbgcolor   = "#414159";
+static const char* selfgcolor   = "#D9E0EE";
+static const char* urgbgcolor   = "#1E1E2E";
 static const char* urgfgcolor   = "#cc0000";
 static const char before[]      = "<";
 static const char after[]       = ">";
@@ -14,14 +14,14 @@ static const char titletrim[]   = "...";
 static const int  tabwidth      = 200;
 static const Bool foreground    = True;
 static       Bool urgentswitch  = False;
-static const int barHeight	= 18;
+static const int barHeight		= 12;
 /*
  * Where to place a new tab when it is opened. When npisrelative is True,
  * then the current position is changed + newposition. If npisrelative
  * is False, then newposition is an absolute position.
  */
-static int  newposition   = 0;
-static Bool npisrelative  = False;
+static int  newposition   = 1;
+static Bool npisrelative  = True;
 
 #define SETPROP(p) { \
         .v = (char *[]){ "/bin/sh", "-c", \
@@ -57,5 +57,4 @@ static Key keys[] = {
 	{ MODKEY,               XK_x,      	killclient,  { 0 } },
 	{ MODKEY,               XK_u,      	focusurgent, { 0 } },
 	{ MODKEY|ShiftMask,     XK_u,      	toggle,      { .v = (void*) &urgentswitch } },
-	{ 0,                    XK_F11,    	fullscreen,  { 0 } },
 };
